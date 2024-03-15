@@ -28,6 +28,16 @@
         android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/noMessageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="No message"
+        android:layout_height="wrap_content"/>
+
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"

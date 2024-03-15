@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.scifalre.chat.data.model.ChatMessage
@@ -39,10 +40,12 @@ class ReceiverFragment : Fragment() {
             when (it.first) {
                 "Message" -> {
                     adapter.addMessage(it.second as ChatMessage)
+                    binding?.noMessageView?.isVisible=adapter.itemCount==0
                 }
 
                 "MessageList" -> {
                     adapter.addMessages(it.second as List<ChatMessage>)
+                    binding?.noMessageView?.isVisible=adapter.itemCount==0
                 }
             }
         }
